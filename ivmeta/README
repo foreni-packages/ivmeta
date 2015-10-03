@@ -1,0 +1,70 @@
+ivMeta: Extract meta data from iPhone videos
+============================================
+
+Copyright(c) 2013, Robin Wood <robin@digininja.org>
+
+ivMeta will attempt to pull the following bits of information from an iPhone
+video
+
+* Maker - should always be Apple
+* iOS Software version
+* Date video was taken
+* GPS co-ords where video was taken
+* Model of phone
+
+It is designed from information given in the following CSI Tech blog:
+
+http://www.csitech.co.uk/iphone-video-metadata
+
+Example output:
+
+********************************
+Parsing: iphone.mov
+********************************
+Type Marker: qt
+Maker: Apple
+Software version: 6.1
+Date: 2013-06-03T13:45:04+0000
+GPS: lat:+53.3831 long:-001.4600 dir:+076.540
+Model: iPhone 4
+
+Usage
+=====
+For full usage information you can run ivMeta with a --help:
+
+# ./ivmeta.py --help
+
+ivMeta 1.0 Robin Wood (robin@digininja.org) (www.digininja.org)
+
+usage: ivmeta.py [-h] [-v] file.mov [file.mov ...]
+
+Parse metadata from an iPhone video
+
+positional arguments:
+  file.mov       Videos to analyse
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose  Verbose output
+
+You can process multiple files at once by either specifying them individually or
+by using wild cards:
+
+# ./ivmeta.py *mov
+
+or:
+
+# ./ivmeta.py video1.mov video2.mov
+
+Feedback
+========
+Send any feedback/comments/questions to me:
+
+robin@digininja.org
+
+Licence
+=======
+This project released under the Creative Commons Attribution-Share Alike 2.0
+UK: England & Wales
+
+( http://creativecommons.org/licenses/by-sa/2.0/uk/ )
